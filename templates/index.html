@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blood Cancer Prediction</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+
+<div class="page">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            <div class="logo-icon">✚</div>
+
+            <div>
+                <h2>HealthPredict</h2>
+                <span>AI Health Screening</span>
+            </div>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            ML Model Active
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <span class="badge">
+                    AI-POWERED SCREENING
+                </span>
+
+                <h1>
+                    Blood Cancer<br>
+                    <span>Symptom Analysis</span>
+                </h1>
+
+                <p>
+                    Answer a few simple questions about your symptoms.
+                    Our machine learning model will analyze your responses
+                    and provide a prediction.
+                </p>
+
+            </div>
+
+            <div class="hero-icon">
+                <div class="heart">♡</div>
+                <div class="pulse"></div>
+            </div>
+
+        </section>
+
+
+        <!-- FORM CARD -->
+
+        <section class="card">
+
+            <div class="card-header">
+
+                <div>
+                    <h2>Symptom Assessment</h2>
+
+                    <p>
+                        Please answer all questions honestly.
+                    </p>
+                </div>
+
+                <div class="question-count">
+                    10 Questions
+                </div>
+
+            </div>
+
+
+            <form method="POST">
+
+                <div class="symptoms-grid">
+
+
+                    <!-- 1 -->
+
+                    <div class="symptom">
+
+                        <div class="symptom-number">
+                            01
+                        </div>
+
+                        <div class="symptom-info">
+
+                            <label>Fatigue</label>
+
+                            <span>
+                                Constant tiredness not relieved by rest
+                            </span>
+
+                        </div>
+
+                        <select name="fatigue" required>
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- 2 -->
+
+                    <div class="symptom">
+
+                        <div class="symptom-number">
+                            02
+                        </div>
+
+                        <div class="symptom-info">
+
+                            <label>Fever</label>
+
+                            <span>
+                                Persistent or unexplained fever
+                            </span>
+
+                        </div>
+
+                        <select name="fever" required>
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- 3 -->
+
+                    <div class="symptom">
+
+                        <div class="symptom-number">
+                            03
+                        </div>
+
+                        <div class="symptom-info">
+
+                            <label>Night Sweats</label>
+
+                            <span>
+                                Excessive sweating during sleep
+                            </span>
+
+                        </div>
+
+                        <select name="night_sweats" required>
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- 4 -->
+
+                    <div class="symptom">
+
+                        <div class="symptom-number">
+                            04
+                        </div>
+
+                        <div class="symptom-info">
+
+                            <label>Weight Loss</label>
+
+                            <span>
+                                Unexplained weight loss
+                            </span>
+
+                        </div>
+
+                        <select name="weight_loss" required>
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- 5 -->
+
+                    <div class="symptom">
+
+                        <div class="symptom-number">
+                            05
+                        </div>
+
+                        <div class="symptom-info">
+
+                            <label>Bruising</label>
+
+                            <span>
+                                Unusual or frequent bruising
+                            </span>
+
+                        </div>
+
+                        <select name="bruising" required>
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- 6 -->
+
+                    <div class="symptom">
+
+                        <div class="symptom-number">
+                            06
+                        </div>
+
+                        <div class="symptom-info">
+
+                            <label>Bone Pain</label>
+
+                            <span>
+                                Persistent pain in bones or joints
+                            </span>
+
+                        </div>
+
+                        <select name="bone_pain" required>
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- 7 -->
+
+                    <div class="symptom">
+
+                        <div class="symptom-number">
+                            07
+                        </div>
+
+                        <div class="symptom-info">
+
+                            <label>Swollen Lymph Nodes</label>
+
+                            <span>
+                                Swelling around the neck or lymph nodes
+                            </span>
+
+                        </div>
+
+                        <select name="swollen_nodes" required>
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- 8 -->
+
+                    <div class="symptom">
+
+                        <div class="symptom-number">
+                            08
+                        </div>
+
+                        <div class="symptom-info">
+
+                            <label>Frequent Infections</label>
+
+                            <span>
+                                Getting infections more often than usual
+                            </span>
+
+                        </div>
+
+                        <select name="infections" required>
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- 9 -->
+
+                    <div class="symptom">
+
+                        <div class="symptom-number">
+                            09
+                        </div>
+
+                        <div class="symptom-info">
+
+                            <label>Pale Skin</label>
+
+                            <span>
+                                Skin appearing unusually pale
+                            </span>
+
+                        </div>
+
+                        <select name="pale_skin" required>
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- 10 -->
+
+                    <div class="symptom">
+
+                        <div class="symptom-number">
+                            10
+                        </div>
+
+                        <div class="symptom-info">
+
+                            <label>Shortness of Breath</label>
+
+                            <span>
+                                Difficulty breathing or getting breathless
+                            </span>
+
+                        </div>
+
+                        <select name="short_breath" required>
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="predict-btn">
+
+                    <span>Analyze Symptoms</span>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- RESULT -->
+
+        {% if result %}
+
+        <section class="result-card">
+
+            <div class="result-icon">
+                ✓
+            </div>
+
+            <div class="result-content">
+
+                <span class="result-label">
+                    AI PREDICTION RESULT
+                </span>
+
+                <h2>
+                    {{ result }}
+                </h2>
+
+                <p>
+                    This result is generated from the symptoms
+                    provided to the machine learning model.
+                </p>
+
+            </div>
+
+        </section>
+
+        {% endif %}
+
+
+        <!-- MODEL INFO -->
+
+        <section class="model-info">
+
+            <div class="info-box">
+
+                <span class="info-icon">◉</span>
+
+                <div>
+                    <strong>Training Accuracy</strong>
+                    <p>{{ train_accuracy }}%</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <span class="info-icon">◉</span>
+
+                <div>
+                    <strong>Testing Accuracy</strong>
+                    <p>{{ test_accuracy }}%</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <span class="info-icon">AI</span>
+
+                <div>
+                    <strong>Algorithm</strong>
+                    <p>Logistic Regression</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WARNING -->
+
+        <div class="notice">
+
+            <span>ⓘ</span>
+
+            <p>
+                <strong>Educational purpose only.</strong>
+                This application provides an ML-based prediction
+                and is not a medical diagnosis. Please consult a
+                qualified healthcare professional for medical advice.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 HealthPredict • AI & Data Science Project
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>
